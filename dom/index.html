@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM manipulation</title>
+</head>
+<body id="body">
+    <button id="clickBtn" onclick="alert('Namaste')"></button>
+    <!--
+    <ul id="element">
+        <li class="list-item" data="valid">first</li>
+        <li class="list-item">second</li>
+        <li class="list-item"
+        >third</li>
+    </ul>
+    <div id ="firstDiv"class="allDivs">First Div</div>
+    <script>
+        const allDivs = document.getElementsByClassName("allDivs")
+        console.log(allDivs)
+    </script>
+    <div>Second Div</div>
+    <table>
+        <tr>
+            <td>first</td>
+            <td>second</td>
+            <td>third</td>
+            <td>fourth</td>
+
+        </tr>
+    </table>
+    <script>
+        //root node
+        console.log(document.documentElement)
+        console.log(document.body)
+        console.log(document.head)
+
+        // children
+        console.log(document.body.childNodes)
+        console.log(document.body.children)
+        for(node of document.body.children /*or childNodes*/){
+        console.log(document.body.children)
+
+        }
+        console.log(document.body.firstElementChild)
+        console.log(document.body.lastElementChild)
+
+        const childrenOfBody = Array.from(document.body.children) 
+        console.log(childrenOfBody)
+
+        //siblings
+        const ulTag = document.body.childNodes[0]
+        const firstLi = ulTag.nextElementSibling[0]
+        const secondLi = ulTag.nextElementSibling[1]
+        console.log(second.previousElementSibling.textContent)
+        console.log(ulTag.nextElementSibling)
+
+        //table dom manipulation
+        const tableTag = document.body.children[1]
+        console.log(tableTag.tBodies[0].rows[0].cells[0].textContent)
+        console.log(tableTag.tBodies[0].rows[0].cells[0].style="background-color:blue;")
+
+        //id search
+        /* element.style.background = "red"
+        console.log(element.style.background = "red") */
+        //or
+        const ultag = document.getElementByID("element")
+        ultag.style.backgroundColor = "orange"
+
+        //class
+        listItem = document.getElementByClassName("list-item")
+        console.log(listItem)
+        console.log(document.getElementsByTagName("table"))
+
+        //query selector
+        const listItems =document.querySelectorAll('.list-item')
+        console.log(listItems)
+        const listItems1 =document.querySelectorAll('ul > li:nth-child(2)')
+        console.log(listItems1[0].textContent)
+
+        //all divs
+        console.log(allDivs)
+
+        colsole.log(element.id.data) //undefined cause it is userdefined
+        console.log(element.getAttribute('data'))//gives ans valid
+        console.log(element.setAttribute('order-place', 'pending'))
+        console.log(element.hasAttribute('order-place'))
+        console.log(element.removeAttribute('order-place'))
+        console.log(element.hasAttribute('order-place'))
+        console.log(element.attributes('order-place'))
+
+        //creating and removing node elements
+        /* const newDiv=document.createElement('div')
+        body.append(newDiv) */
+
+        const newDiv=document.createElement('div')
+        const newText = document.createTextNode('namaste')
+        // newDiv.appendChild(newText)
+        // body.prependChild(newText)
+        // body.after(newText)
+        // body.before(newText)
+        body.append(newDiv)
+        // firstDiv.replaceWith(newDiv)
+        firstDiv.remove()
+-->
+    <script>
+        //events
+        function callMe(){
+            alert("Thanks")
+        }
+        clickBtn.onclick = callMe()//calling
+        clickBtn.onclick = callMe//passing
+        clickBtn.addEventListener('click',callMe)
+        clickBtn.removeEventListener('click',callMe)
+
+    </script>
+</body>
+</html>
